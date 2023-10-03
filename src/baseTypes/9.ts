@@ -2,23 +2,16 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
-type Page =
-  | {
-      title: string;
-      likes: number;
-      accounts: string[];
-      status: string;
-      details: {
-        createAt: Date;
-        updateAt: Date;
-      };
-    }
-  | {
-      title: string;
-      likes: number;
-      accounts: string[];
-      status: string;
-    };
+type Page = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
+};
 
 const page1: Page = {
   title: "The awesome page",
